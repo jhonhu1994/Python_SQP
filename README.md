@@ -7,8 +7,8 @@ This GitHub repository hosts a Python version of the Sequential Quadratic Progra
 SQP methods and interior-point methods are two main representative approaches for solving constrained (smooth) nonlinear optimization problems. In general, SQP methods can handle the minimization of functions subject to both linear and nonlinear constraints, which may be written in the form
 
 $$
-\min_ {\mathbf{x}\in\mathbb{R}^n}\;f(\mathbf{x})\qquad\qquad\qquad\qquad\qquad\\
-\mbox{s.t.}\;\;h_ i(\mathbf{x})=0,\;i\in\mathcal{E}={1,\cdots,l},\\
+\min_ {\mathbf{x}\in\mathbb{R}^n}\;f(\mathbf{x})\qquad\qquad\qquad\qquad\qquad\\\\
+\mbox{s.t.}\;\;h_ i(\mathbf{x})=0,\;i\in\mathcal{E}={1,\cdots,l},\\\\
 \qquad\quad\quad h_j(\mathbf{x})\geq 0,\;i\in\mathcal{I}={l+1,\cdots,m},\tag{1}
 $$
 
