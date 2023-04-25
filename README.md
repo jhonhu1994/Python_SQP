@@ -8,8 +8,8 @@ SQP methods and interior-point methods are two main representative approaches fo
 
 $$
 \min_ {\mathbf{x}\in\mathbb{R}^n}\\;f(\mathbf{x})\qquad\qquad\qquad\qquad\qquad\\\\
-\mbox{s.t.}\\;\\;h_ i(\mathbf{x})=0,\\;i\in\mathcal{E}={1,\cdots,l},\\\\
-\qquad\quad\quad h_j(\mathbf{x})\geq 0,\\;i\in\mathcal{I}={l+1,\cdots,m},\tag{1}
+\mbox{s.t.}\\;\\;h_ i(\mathbf{x})=0,\\;i\in\mathcal{E}=\{1,\cdots,l\},\\\\
+\qquad\quad\quad h_j(\mathbf{x})\geq 0,\\;i\in\mathcal{I}=\{l+1,\cdots,m\},\tag{1}
 $$
 
 where $f(\cdot)$ and the functions $c_ i(\cdot)$ are all smooth, real-valued functions on a subset of $\mathbb{R}^ n$,  at least one of whom is nonlinear. By convention, we call $f$ the objective function, where $c_i,\\,i\in\mathcal{E}$ are the equality constraints and $c_ i,\\,i\in\mathcal{I}$  are the inequality constraints. SQP methods approach a stationary solution to (1) by solving a sequence of quadratic programming (QP) subproblems in which a quadratic model of the objective function is minimized subject to a linearization of the constraints. Specifically, at the $k$-th iteration, SQP methods involve solving a QP subproblem of the following form:
@@ -19,7 +19,7 @@ $$
 $$
 
 $$
-\mbox{s.t.}\;\;\nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})=0,\;i\in\mathcal{E},\qquad\quad\\
+\mbox{s.t.}\;\;\nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})=0,\;i\in\mathcal{E},\\
 \nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})\geq0,\;i\in\mathcal{I},\quad\tag{2}
 $$
 
