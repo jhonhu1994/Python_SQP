@@ -15,7 +15,7 @@ $$
 where $f(\cdot)$ and the functions $c_ i(\cdot)$ are all smooth, real-valued functions on a subset of $\mathbb{R}^ n$,  at least one of whom is nonlinear. By convention, we call $f$ the objective function, where $c_i,\\,i\in\mathcal{E}$ are the equality constraints and $c_ i,\\,i\in\mathcal{I}$  are the inequality constraints. SQP methods approach a stationary solution to (1) by solving a sequence of quadratic programming (QP) subproblems in which a quadratic model of the objective function is minimized subject to a linearization of the constraints. Specifically, at the $k$-th iteration, SQP methods involve solving a QP subproblem of the following form:
 
 $$
-\mathbf{x}_k\leftarrow\arg\,\min_ {\mathbf{x}\in\mathbb{R}^n}\;f(\mathbf{x}_ {k-1})+\nabla f(\mathbf{x}_ {k+1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+\frac{1}{2}(\mathbf{x}-\mathbf{x}_ {k-1})^\mathrm{T}\mathbf{H}_ {k}(\mathbf{x}-\mathbf{x}_ {k-1})
+\mathbf{x}_k\leftarrow\arg\,\min_ {\mathbf{x}\in\mathbb{R}^n}\;f(\mathbf{x}_ {k-1})+\nabla f(\mathbf{x}_ {k+1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+\frac{1}{2}(\mathbf{x}-\mathbf{x}_ {k-1})^\mathrm{T}\mathbf{H}_ {k}(\mathbf{x}-\mathbf{x}_ {k-1})\qquad\qquad\qquad
 $$
 
 $$
@@ -33,7 +33,7 @@ In this repository, the user can find:
 
 - '_run_\__SQP.py_', which implements the outer iterative progress of the Han-Powell SQP method for solving (1).
 -  '_QP\_solver.py_', a subroutine that will be needed in the '_run_\__SQP.py_', which solves the QP subproblem (2) using the smooth Newton method (the user can adopt an alternative QP solver, such as _qpsolvers.solve\_qp_ and _Cvxopt.solvers.qp_).
-- '_problem\_specified.py_', in which the user should specify the optimization problem at hand, including the objective function $f(\mathbf{x})$ and its gradient, the vector of  $l$ equality constraint functions $h_ i(\mathbf{x}),\,i\in\mathcal{E}$ and the corresponding Jacobian matrix, and the vector of  $m-l$ inequality constraint functions $h_ i(\mathbf{x}),\,i\in\mathcal{I}$ and the corresponding Jacobian matrix (Three simple examples has been presented to illustrate the usage).
+- '_problem\_specified.py_', in which the user should specify the optimization problem at hand, including the objective function $f(\mathbf{x})$ and its gradient, the vector of  $l$ equality constraint functions $h_ i(\mathbf{x}),\\,i\in\mathcal{E}$ and the corresponding Jacobian matrix, and the vector of  $m-l$ inequality constraint functions $h_ i(\mathbf{x}),\\,i\in\mathcal{I}$ and the corresponding Jacobian matrix (Three simple examples has been presented to illustrate the usage).
 - '_demo.py_', which runs one of the three examples.
 
 ## Environment
