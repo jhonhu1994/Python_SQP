@@ -15,12 +15,12 @@ $$
 where $f(\cdot)$ and the functions $c_ i(\cdot)$ are all smooth, real-valued functions on a subset of $\mathbb{R}^ n$,  at least one of whom is nonlinear. By convention, we call $f$ the objective function, where $c_i,\\,i\in\mathcal{E}$ are the equality constraints and $c_ i,\\,i\in\mathcal{I}$  are the inequality constraints. SQP methods approach a stationary solution to (1) by solving a sequence of quadratic programming (QP) subproblems in which a quadratic model of the objective function is minimized subject to a linearization of the constraints. Specifically, at the $k$-th iteration, SQP methods involve solving a QP subproblem of the following form:
 
 $$
-\mathbf{x}_k\leftarrow\arg\,\min_ {\mathbf{x}\in\mathbb{R}^n}\;f(\mathbf{x}_ {k-1})+\nabla f(\mathbf{x}_ {k+1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+\frac{1}{2}(\mathbf{x}-\mathbf{x}_ {k-1})^\mathrm{T}\mathbf{H}_ {k}(\mathbf{x}-\mathbf{x}_ {k-1})\qquad\qquad\qquad
+\mathbf{x}_k\leftarrow\arg\,\min_ {\mathbf{x}\in\mathbb{R}^n}\;f(\mathbf{x}_ {k-1})+\nabla f(\mathbf{x}_ {k+1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+\frac{1}{2}(\mathbf{x}-\mathbf{x}_ {k-1})^\mathrm{T}\mathbf{H}_ {k}(\mathbf{x}-\mathbf{x}_ {k-1})\qquad\qquad\qquad\qquad
 $$
 
 $$
-\mbox{s.t.}\;\;\nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})=0,\;i\in\mathcal{E},\\
-\nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})\geq0,\;i\in\mathcal{I},\quad\tag{2}
+\mbox{s.t.}\\;\\;\nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})=0,\;i\in\mathcal{E},\\
+\quad\nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})\geq0,\;i\in\mathcal{I},\tag{2}
 $$
 
 where $\mathbf{H}_ k$ is the Hessian matrix of the Lagrangian function for (1), i.e., $\mathcal{L}(\mathbf{x},\{\lambda\}_ {i=1}^m)=f(\mathbf{x})-\sum_ {i}\lambda_ ih_i(\mathbf{x})$. In practice, $\mathbf{H}_ k$ is usually approximated by a positive matrix $\mathbf{B}_ k$, e.g., quasi-Newton approximations.
