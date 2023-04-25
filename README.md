@@ -17,6 +17,7 @@ where $f(\cdot)$ and the functions $c_ i(\cdot)$ are all smooth, real-valued fun
 $$
 \mathbf{x}_k\leftarrow\arg\,\min_ {\mathbf{x}\in\mathbb{R}^n}\;f(\mathbf{x}_ {k-1})+\nabla f(\mathbf{x}_ {k+1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+\frac{1}{2}(\mathbf{x}-\mathbf{x}_ {k-1})^\mathrm{T}\mathbf{H}_ {k}(\mathbf{x}-\mathbf{x}_ {k-1})
 $$
+
 $$
 \mbox{s.t.}\;\;\nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})=0,\;i\in\mathcal{E},\qquad\quad\\
 \nabla h_ i(\mathbf{x}_ {k-1})^\mathrm{T}(\mathbf{x}-\mathbf{x}_ {k-1})+h_ i(\mathbf{x}_ {k-1})\geq0,\;i\in\mathcal{I},\quad\tag{2}
